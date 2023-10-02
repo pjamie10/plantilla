@@ -1,0 +1,16 @@
+<div class="header-container">
+  <header [ngClass]="{'hide-menu': !mostrarMenu}">
+    <nav>
+      <ul>
+        <li [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">INICIO</li>
+        <li [routerLink]="['/proyectos']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">PROYECTOS</li>
+        <li>SERVICIOS</li>
+        <li>CONTACTO</li>
+      </ul>
+    </nav>
+  </header>
+  <button class="btn-menu" (click)="toggleMenu()">
+    <i [ngClass]="!mostrarMenu ? 'bi bi-list' : 'bi bi-x'"></i>
+  </button>
+</div>
+

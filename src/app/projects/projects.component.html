@@ -1,0 +1,13 @@
+<div class="page">
+  <div class="proyecto">
+    <div *ngFor="let proyecto of proyectos" style="padding: 30px;">
+      <div class="descripcion-proyecto" (click)="enviarObjeto(proyecto)">
+        <div class="titulo-proyecto"><span>{{ proyecto.titulo }}</span></div>
+      </div>
+      <div class="imagen-proyecto" (click)="enviarObjeto(proyecto)">
+        <img [src]="proyecto.imagenSrc" [alt]="proyecto.titulo">
+      </div>
+    </div>
+  </div>
+</div>
+

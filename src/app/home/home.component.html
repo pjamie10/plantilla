@@ -1,0 +1,20 @@
+<div class="page">
+  <div class="background-image">
+    <img src="https://static.wixstatic.com/media/f61af8_c7da40d55afc48ce9a4315094fe946ea~mv2_d_2160_1440_s_2.jpg/v1/fill/w_1899,h_1016,al_tr,q_85,usm_0.66_1.00_0.01,enc_auto/f61af8_c7da40d55afc48ce9a4315094fe946ea~mv2_d_2160_1440_s_2.jpg" alt="Imagen de fondo">
+  </div>
+  <div class="content-main">
+    <div class="title animate__animated animate__backInLeft">
+      <h1>ARQUITECTOS</h1>
+      <h2>PROYECTOS DESTACADOS</h2>
+    </div>
+    <div *ngFor="let proyecto of proyectos" class="proyecto">
+      <div class="imagen-proyecto animate__bounceIn" (click)="enviarObjeto(proyecto)">
+        <img [src]="proyecto.imagenSrc" [alt]="proyecto.titulo">
+      </div>
+      <div class="descripcion-proyecto" (click)="enviarObjeto(proyecto)">
+        <div class="titulo-proyecto animate__animated animate__backInRight"><span>{{ proyecto.titulo }}</span></div>
+        <div class="descripcion animate__animated animate__backInRight">{{ proyecto.descripcion }}</div>
+      </div>
+    </div>
+  </div>
+</div>
